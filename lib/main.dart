@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/screens/complete_profile/complete_profile_screen.dart';
 import 'package:shop_app/screens/forgot_password/forgot_password_screen.dart';
 import 'package:shop_app/screens/init_screen.dart';
+import 'package:shop_app/screens/splash/splash_screen.dart';
 
 import 'routes.dart';
 import 'theme.dart';
@@ -20,8 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'The Flutter Way - Template',
       theme: AppTheme.lightTheme(context),
-      // initialRoute: SplashScreen.routeName,
-      initialRoute: ForgotPasswordScreen.routeName,
+      initialRoute: SplashScreen.routeName,
       routes: routes,
     );
   }
