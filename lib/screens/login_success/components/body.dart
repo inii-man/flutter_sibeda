@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/screens/init_screen.dart';
 
-import '../../home/home_screen.dart';
 import '../../../size_config.dart';
 
 class Body extends StatelessWidget {
