@@ -88,7 +88,7 @@ class _SiemanFormState extends State<SiemanForm> {
                 Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
-            child: const Text("Kirim Data"),
+            child: const Text("Submit"),
           ),
         ],
       ),
