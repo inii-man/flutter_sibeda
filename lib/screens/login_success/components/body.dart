@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/init_screen.dart';
 
-import '../../home/home_screen.dart';
 import '../../../size_config.dart';
 
 class Body extends StatelessWidget {
@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
           width: SizeConfig.screenWidth * 0.6,
           child: ElevatedButton(
             onPressed: () {
-              Navigator.pushNamed(context, HomeScreen.routeName);
+              Navigator.pushNamed(context, InitScreen.routeName);
             },
             child: const Text("Back to home"),
           ),
