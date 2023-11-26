@@ -1,17 +1,36 @@
 import 'package:flutter/material.dart';
-import 'components/body.dart';
 import '../../size_config.dart';
 
-class SplashScreen extends StatelessWidget {
-  static String routeName = "/splash";
+class SplashScreen extends StatefulWidget {
+  static const String routeName = "/splash";
 
-  const SplashScreen({super.key});
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    _toLoginPage();
+    super.initState();
+  }
+
+  void _toLoginPage() async {
+    await Future.delayed(const Duration(seconds: 2));
+    Navigator.pushReplacementNamed(context, '/sign_in');
+  }
+
   @override
   Widget build(BuildContext context) {
-    // You have to call it on your starting screen
     SizeConfig().init(context);
-    return const Scaffold(
-      body: Body(),
+    return Scaffold(
+      body: Image.asset(
+        'assets/images/splash_screen.png',
+        fit: BoxFit.cover,
+        height: double.infinity,
+      ),
     );
   }
 }

@@ -4,6 +4,7 @@ import 'package:shop_app/constants.dart';
 import 'package:shop_app/screens/favorite/favorite_screen.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/screens/profile/profile_screen.dart';
+import 'package:shop_app/screens/profilsibeda/profil_screen.dart';
 
 const Color inActiveIconColor = Color(0xFFB6B6B6);
 
@@ -31,7 +32,7 @@ class _InitScreenState extends State<InitScreen> {
     const Center(
       child: Text("Chat"),
     ),
-    const ProfileScreen()
+    const ProfilScreen()
   ];
 
   @override
