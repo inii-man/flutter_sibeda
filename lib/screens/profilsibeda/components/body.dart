@@ -87,7 +87,9 @@ class Body extends StatelessWidget {
               ProfileMenu(
                 text: "Profile BPBD",
                 icon: "assets/icons/User Icon.svg",
-                press: () => {},
+                press: () => {
+                  Navigator.pushNamed(context, '/profilbpbd'),
+                },
               ),
               ProfileMenu(
                 text: "Kontak BPBD",
@@ -97,7 +99,9 @@ class Body extends StatelessWidget {
               ProfileMenu(
                 text: "Dokumen",
                 icon: "assets/icons/Mail.svg",
-                press: () {},
+                press: () {
+                  Navigator.pushNamed(context, '/dokumen');
+                },
               ),
             ],
           ),
