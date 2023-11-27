@@ -19,6 +19,9 @@ import 'screens/sitana/sitana_screen.dart';
 import 'screens/sirere/sirere_screen.dart';
 import 'screens/penamahi/penamahi_screen.dart';
 import 'screens/profilsibeda/profil_screen.dart';
+import 'screens/infografis/infografis_screen.dart';
+import 'screens/dokumen/dokumen_screen.dart';
+import 'screens/detailprofilbpbd/detailprofil_screen.dart';
 
 // We use name route
 // All our routes will be available here
@@ -44,5 +47,8 @@ final Map<String, WidgetBuilder> routes = {
   CartScreen.routeName: (context) => const CartScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
   BeritaScreen.routeName: (context) => const BeritaScreen(),
-  ProfilScreen.routeName: (context) => const ProfilScreen(),
+  ProfilScreen.routeName: (context) => const ProfilScreen(),  
+  InfografisScreen.routeName: (context) => const InfografisScreen(),
+  DokumenScreen.routeName: (context) => const DokumenScreen(),
+  DetailprofilScreen.routeName: (context) => const DetailprofilScreen(),
 };
