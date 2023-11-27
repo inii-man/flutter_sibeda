@@ -15,6 +15,9 @@ import 'screens/sign_up/sign_up_screen.dart';
 import 'screens/splash/splash_screen.dart';
 import 'screens/berita/berita_screen.dart';
 import 'screens/sieman/sieman_screen.dart';
+import 'screens/sitana/sitana_screen.dart';
+import 'screens/sirere/sirere_screen.dart';
+import 'screens/penamahi/penamahi_screen.dart';
 import 'screens/profilsibeda/profil_screen.dart';
 
 // We use name route
@@ -23,7 +26,13 @@ final Map<String, WidgetBuilder> routes = {
   InitScreen.routeName: (context) => const InitScreen(),
   SplashScreen.routeName: (context) => const SplashScreen(),
   SignInScreen.routeName: (context) => const SignInScreen(),
+
+// input menu
   SiemanScreen.routeName: (context) => const SiemanScreen(),
+  SitanaScreen.routeName: (context) => const SitanaScreen(),
+  SirereScreen.routeName: (context) => const SirereScreen(),
+  PenamahiScreen.routeName: (context) => const PenamahiScreen(),
+
   ForgotPasswordScreen.routeName: (context) => const ForgotPasswordScreen(),
   LoginSuccessScreen.routeName: (context) => const LoginSuccessScreen(),
   SignUpScreen.routeName: (context) => const SignUpScreen(),
@@ -35,5 +44,5 @@ final Map<String, WidgetBuilder> routes = {
   CartScreen.routeName: (context) => const CartScreen(),
   ProfileScreen.routeName: (context) => const ProfileScreen(),
   BeritaScreen.routeName: (context) => const BeritaScreen(),
-  ProfilScreen.routeName: (context) => const ProfilScreen(),  
+  ProfilScreen.routeName: (context) => const ProfilScreen(),
 };
