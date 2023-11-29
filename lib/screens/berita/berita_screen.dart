@@ -28,9 +28,9 @@ class BeritaScreen extends StatelessWidget {
         ],
       ),
     ),
-  body: Column(
+  body: ListView(
     children: [
-      Container(
+    Container(
     margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
     width: double.maxFinite,
     height: 136,
@@ -61,8 +61,6 @@ class BeritaScreen extends StatelessWidget {
                 style: const TextStyle(fontSize: 14.0, fontWeight: FontWeight.bold),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                //berikan code font style dengan font semibold
-
               ),
               const SizedBox(height: 10),
               Text(
@@ -125,8 +123,8 @@ class BeritaScreen extends StatelessWidget {
     ],
     
   ),
-   
-    );
+  );
+    
   }
 } 
 

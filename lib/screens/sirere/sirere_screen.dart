@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import 'components/body.dart';
 
-class SiemanScreen extends StatelessWidget {
-  static String routeName = "/sieman";
+class SirereScreen extends StatelessWidget {
+  static String routeName = "/sirere";
 
-  const SiemanScreen({super.key});
+  const SirereScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,7 @@ class SiemanScreen extends StatelessWidget {
         title: Row(
           children: [
             Image.asset(
-              'assets/images/logo_sieman.png',
+              'assets/images/logo_sirere.png',
               height: 20.0,
             ),
           ],
