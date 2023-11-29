@@ -1,9 +1,13 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import '../../../components/custom_surfix_icon.dart';
 import '../../../components/form_error.dart';
 import '../../../helper/keyboard.dart';
 import '../../forgot_password/forgot_password_screen.dart';
 import '../../login_success/login_success_screen.dart';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -35,6 +39,49 @@ class _SignFormState extends State<SignForm> {
       setState(() {
         errors.remove(error);
       });
+    }
+  }
+
+  Future<void> _login() async {
+    const String apiUrl = 'http://sibeda-development.cpat.my.id/api/auth/login'; // Replace with your API endpoint
+    const String clientSecret = r'$2y$10$ZgGVFcmLqP66BhyBDAUcrOlE7TYMx18nXASFyngHBYLGjOy34Xw1.';
+
+    try {
+      final response = await http.post(
+        Uri.parse(apiUrl),
+        body: {
+          'username': email!,
+          'password': password!,
+          'client_id': 'mobile_dev',
+          'client_secret': clientSecret,
+        },
+      );
+
+      if (response.statusCode == 200) {
+        // Successful login
+        final Map<String, dynamic> data = json.decode(response.body);
+        final String token = data['access_token'];
+
+        // Store the token in shared preferences
+        final SharedPreferences prefs = await SharedPreferences.getInstance();
+        prefs.setString('token', token);
+
+        // Navigate to the success screen or do any other necessary actions
+        Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+      } else {
+        // Failed login
+        final Map<String, dynamic> error = json.decode(response.body);
+
+        // Display error to the user
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(error['message'])),
+        );
+      }
+    } catch (e) {
+      // Display error to the user
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('An error occurred. Please try again later.')),
+      );
     }
   }
 
@@ -79,7 +126,7 @@ class _SignFormState extends State<SignForm> {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
                 KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                _login(); // Call the login function
               }
             },
             child: const Text("Continue"),
