@@ -45,6 +45,7 @@ class _InitScreenState extends State<InitScreen> {
         currentIndex: currentSelectedIndex,
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        selectedItemColor: kPrimaryColor,
         type: BottomNavigationBarType.fixed,
         items: const [
             BottomNavigationBarItem(
