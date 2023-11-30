@@ -39,6 +39,13 @@ const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
 
+//ubah nama profil
+const String kProfilNullError = "Mohon Masukan Nama Anda";
+
+//ubah pass
+const String kPassNewNullError = "Mohon Masukan Password Baru Anda";
+const String kPassKonfirmNullError = "Mohon Konfirmasi Password Baru Anda";
+
 final otpInputDecoration = InputDecoration(
   contentPadding:
       EdgeInsets.symmetric(vertical: getProportionateScreenWidth(15)),

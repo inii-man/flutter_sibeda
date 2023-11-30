@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'components/body.dart';
 
-class DetailprofilScreen extends StatelessWidget {
-  static String routeName = "/profilbpbd";
+class UbahnamaScreen extends StatelessWidget {
+  static String routeName = "/ubahnama";
 
-  const DetailprofilScreen({super.key});
+  const UbahnamaScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,12 +24,12 @@ class DetailprofilScreen extends StatelessWidget {
         children: [
           SizedBox(height: 30.0),
           Image.asset(
-              'assets/images/profilebpbd.png', height: 25.0,
+              'assets/images/ubahnama.png', height: 25.0,
             ),
         ],
       ),
       ),
-      body: const Body(),
+     body: const Body(),
     );
   }
 }
