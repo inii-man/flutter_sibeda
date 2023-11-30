@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'components/body.dart';
+//import 'components/body.dart';
 
-class DetailprofilScreen extends StatelessWidget {
-  static String routeName = "/profilbpbd";
+class DashboardScreen extends StatelessWidget {
+  static String routeName = "/dashboard";
 
-  const DetailprofilScreen({super.key});
+  const DashboardScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 242, 242, 242),
       appBar: AppBar(
-      //automaticallyImplyLeading: false,
+      automaticallyImplyLeading: false,
       backgroundColor: Colors.white,
       elevation: 0,
       bottom: PreferredSize(
@@ -22,14 +22,13 @@ class DetailprofilScreen extends StatelessWidget {
       ),
       title: Row(
         children: [
-          SizedBox(height: 30.0),
           Image.asset(
-              'assets/images/profilebpbd.png', height: 25.0,
+              'assets/images/dashboard.png', height: 20.0,
             ),
         ],
       ),
       ),
-      body: const Body(),
+     // body: const Body(),
     );
   }
 }
