@@ -48,35 +48,207 @@ class _SiemanFormState extends State<SiemanForm> {
       key: _formKey,
       child: Column(
         children: [
-          buildLaporanField(),
-          // SizedBox(height: getProportionateScreenHeight(30)),
-          // buildEmailFormField(),
-          // SizedBox(height: getProportionateScreenHeight(30)),
-          // buildPasswordFormField(),
+          /// CARD LAPORAN
+          Container(
+            height: 100,
+            width: double.maxFinite,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 20),
+                Container(
+                  margin: EdgeInsets.only(left: 24, right: 10),
+                  child: Row(
+                    children: [],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20),
+                  child: buildLaporanField(),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: getProportionateScreenHeight(10)),
+
+          /// CARD TIM ASSESMENT
+          Container(
+            height: 220,
+            width: double.maxFinite,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 20),
+                Container(
+                  margin: EdgeInsets.only(left: 24, right: 10),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Tim Assesment',
+                        style: const TextStyle(
+                            fontSize: 14.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: getProportionateScreenHeight(10)),
+
+          /// CARD INFORMASI UMUM
+          Container(
+            height: 520,
+            width: double.maxFinite,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 20),
+                Container(
+                  margin: EdgeInsets.only(left: 24, right: 10),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Informasi Umum',
+                        style: const TextStyle(
+                            fontSize: 14.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: getProportionateScreenHeight(10)),
+          Container(
+            height: 520,
+            width: double.maxFinite,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 20),
+                Container(
+                  margin: EdgeInsets.only(left: 24, right: 10),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Lokasi Assesment',
+                        style: const TextStyle(
+                            fontSize: 14.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: getProportionateScreenHeight(10)),
+          Container(
+            height: 520,
+            width: double.maxFinite,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 255, 255, 255),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 20),
+                Container(
+                  margin: EdgeInsets.only(left: 24, right: 10),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Lokasi Assesment',
+                        style: const TextStyle(
+                            fontSize: 14.0, fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: buildLaporanField(),
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: testField(),
+                )
+              ],
+            ),
+          ),
           SizedBox(height: getProportionateScreenHeight(30)),
-          // Row(
-          //   children: [
-          //     Checkbox(
-          //       value: remember,
-          //       activeColor: kPrimaryColor,
-          //       onChanged: (value) {
-          //         setState(() {
-          //           remember = value;
-          //         });
-          //       },
-          //     ),
-          //     const Text("Remember me"),
-          //     const Spacer(),
-          //     GestureDetector(
-          //       onTap: () => Navigator.pushNamed(
-          //           context, ForgotPasswordScreen.routeName),
-          //       child: const Text(
-          //         "Forgot Password",
-          //         style: TextStyle(decoration: TextDecoration.underline),
-          //       ),
-          //     )
-          //   ],
-          // ),
           FormError(errors: errors),
           SizedBox(height: getProportionateScreenHeight(20)),
           ElevatedButton(
@@ -95,68 +267,59 @@ class _SiemanFormState extends State<SiemanForm> {
     );
   }
 
-  TextFormField buildPasswordFormField() {
-    return TextFormField(
-      obscureText: true,
-      onSaved: (newValue) => password = newValue,
-      onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kPassNullError);
-        } else if (value.length >= 8) {
-          removeError(error: kShortPassError);
-        }
-        return;
-      },
-      validator: (value) {
-        if (value!.isEmpty) {
-          addError(error: kPassNullError);
-          return "";
-        } else if (value.length < 8) {
-          addError(error: kShortPassError);
-          return "";
-        }
-        return null;
-      },
-      decoration: const InputDecoration(
-        labelText: "Password",
-        hintText: "Enter your password",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
-        floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+//   class DropdownMenuExample extends StatefulWidget {
+//   const DropdownMenuExample({super.key});
+
+//   @override
+//   State<DropdownMenuExample> createState() => _DropdownMenuExampleState();
+// }
+
+  DropdownMenuExample() {
+    List<String> list = <String>['One', 'Two', 'Three', 'Four'];
+    String dropdownValue = list.first;
+    return DropdownButton<String>(
+      value: dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      elevation: 16,
+      style: const TextStyle(color: Colors.deepPurple),
+      underline: Container(
+        height: 2,
+        color: Colors.deepPurpleAccent,
       ),
+      onChanged: (String? value) {
+        // This is called when the user selects an item.
+        setState(() {
+          dropdownValue = value!;
+        });
+      },
+      items: list.map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
     );
   }
 
-  TextFormField buildEmailFormField() {
-    return TextFormField(
-      keyboardType: TextInputType.emailAddress,
-      onSaved: (newValue) => email = newValue,
+  DropdownButtonFormField testField() {
+    List<String> list = <String>['One', 'Two', 'Three', 'Four'];
+    String dropdownValue = list.first;
+    return DropdownButtonFormField(
+      items: [
+        DropdownMenuItem(
+          child: Text("One"),
+          value: "One",
+        ),
+      ],
       onChanged: (value) {
-        if (value.isNotEmpty) {
-          removeError(error: kEmailNullError);
-        } else if (emailValidatorRegExp.hasMatch(value)) {
-          removeError(error: kInvalidEmailError);
-        }
-        return;
-      },
-      validator: (value) {
-        if (value!.isEmpty) {
-          addError(error: kEmailNullError);
-          return "";
-        } else if (!emailValidatorRegExp.hasMatch(value)) {
-          addError(error: kInvalidEmailError);
-          return "";
-        }
-        return null;
+        print(value);
       },
       decoration: const InputDecoration(
-        labelText: "Email",
-        hintText: "Enter your email",
-        // If  you are using latest version of flutter then lable text and hint text shown like this
-        // if you r using flutter less then 1.20.* then maybe this is not working properly
+        labelText: "Lokasi",
+        hintText: "Lokasi",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+        suffixIcon:
+            CustomSurffixIcon(svgIcon: "assets/icons/Location point.svg"),
       ),
     );
   }
