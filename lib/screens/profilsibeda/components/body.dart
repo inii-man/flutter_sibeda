@@ -133,12 +133,16 @@ class Body extends StatelessWidget {
               ProfileMenu(
                 text: "Ubah Nama Profil",
                 icon: "assets/icons/Parcel.svg",
-                press: () => {},
+                press: () => {
+                  Navigator.pushNamed(context, '/ubahnama'),
+                },
               ),
               ProfileMenu(
                 text: "Ubah Password",
                 icon: "assets/icons/Lock.svg",
-                press: () {},
+                press: () {
+                  Navigator.pushNamed(context, '/ubahpass');
+                },
               ),
             ],
           ),
