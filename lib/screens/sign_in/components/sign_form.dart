@@ -43,7 +43,8 @@ class _SignFormState extends State<SignForm> {
   }
 
   Future<void> _login() async {
-    const String apiUrl = 'http://sibeda-development.cpat.my.id/api/auth/login'; // Replace with your API endpoint
+    const String host = 'http://sibeda-development.cpat.my.id';
+    const String apiUrl = '$host/api/auth/login'; // Replace with your API endpoint
     const String clientSecret = r'$2y$10$ZgGVFcmLqP66BhyBDAUcrOlE7TYMx18nXASFyngHBYLGjOy34Xw1.';
 
     try {
