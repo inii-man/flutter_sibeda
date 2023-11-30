@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shop_app/constants.dart';
-import 'package:shop_app/screens/favorite/favorite_screen.dart';
+import 'package:shop_app/screens/berita/berita_screen.dart';
+import 'package:shop_app/screens/dashboard/dashboard_screen.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
-import 'package:shop_app/screens/profile/profile_screen.dart';
+import 'package:shop_app/screens/infografis/infografis_screen.dart';
 import 'package:shop_app/screens/profilsibeda/profil_screen.dart';
 
 const Color inActiveIconColor = Color(0xFFB6B6B6);
@@ -28,11 +28,9 @@ class _InitScreenState extends State<InitScreen> {
 
   final pages = [
     const HomeScreen(),
-    const FavoriteScreen(),
-    const Center(
-      child: Text("Chat"),
-    ),
-    const FavoriteScreen(),
+    const BeritaScreen(),
+    const DashboardScreen(),
+    const InfografisScreen(),
     const ProfilScreen()
   ];
 

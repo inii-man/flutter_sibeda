@@ -18,11 +18,11 @@ class HomeScreen extends StatelessWidget {
         body: ListView(
           children: [
             Container(
-              color: kPrimaryColor,
+              color: Color.fromARGB(254, 254, 98,42),
               height: 200,
               padding: const EdgeInsets.all(24),
               child: Image.asset(
-                'assets/images/header.png',
+                'assets/images/header-polos.png',
                 fit: BoxFit.cover,
                 height: double.infinity,
               ),
