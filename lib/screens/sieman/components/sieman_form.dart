@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../../../components/custom_surfix_icon.dart';
 import '../../../components/form_error.dart';
 import '../../../helper/keyboard.dart';
-import '../../forgot_password/forgot_password_screen.dart';
 import '../../login_success/login_success_screen.dart';
 
 import '../../../constants.dart';
@@ -50,9 +49,9 @@ class _SiemanFormState extends State<SiemanForm> {
         children: [
           /// CARD LAPORAN
           Container(
-            height: 100,
+            height: 115,
             width: double.maxFinite,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color.fromARGB(255, 255, 255, 255),
             ),
             child: Column(
@@ -60,13 +59,13 @@ class _SiemanFormState extends State<SiemanForm> {
               children: [
                 const SizedBox(height: 20),
                 Container(
-                  margin: EdgeInsets.only(left: 24, right: 10),
-                  child: Row(
+                  margin: const EdgeInsets.only(left: 24, right: 10),
+                  child: const Row(
                     children: [],
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20),
                   child: buildLaporanField(),
                 ),
               ],
@@ -76,9 +75,9 @@ class _SiemanFormState extends State<SiemanForm> {
 
           /// CARD TIM ASSESMENT
           Container(
-            height: 220,
+            height: 250,
             width: double.maxFinite,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color.fromARGB(255, 255, 255, 255),
             ),
             child: Column(
@@ -86,8 +85,8 @@ class _SiemanFormState extends State<SiemanForm> {
               children: [
                 const SizedBox(height: 20),
                 Container(
-                  margin: EdgeInsets.only(left: 24, right: 10),
-                  child: Row(
+                  margin: const EdgeInsets.only(left: 24, right: 10),
+                  child: const Row(
                     children: [
                       Text(
                         'Tim Assesment',
@@ -97,13 +96,13 @@ class _SiemanFormState extends State<SiemanForm> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20),
                   child: buildLaporanField(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: buildLaporanField(),
                 ),
               ],
@@ -113,9 +112,9 @@ class _SiemanFormState extends State<SiemanForm> {
 
           /// CARD INFORMASI UMUM
           Container(
-            height: 520,
+            height: 700,
             width: double.maxFinite,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color.fromARGB(255, 255, 255, 255),
             ),
             child: Column(
@@ -124,7 +123,7 @@ class _SiemanFormState extends State<SiemanForm> {
                 const SizedBox(height: 20),
                 Container(
                   margin: EdgeInsets.only(left: 24, right: 10),
-                  child: Row(
+                  child: const Row(
                     children: [
                       Text(
                         'Informasi Umum',
@@ -134,29 +133,29 @@ class _SiemanFormState extends State<SiemanForm> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20),
                   child: buildLaporanField(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: buildLaporanField(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: buildLaporanField(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: buildLaporanField(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: buildLaporanField(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: buildLaporanField(),
                 ),
               ],
@@ -164,9 +163,9 @@ class _SiemanFormState extends State<SiemanForm> {
           ),
           SizedBox(height: getProportionateScreenHeight(10)),
           Container(
-            height: 520,
+            height: 570,
             width: double.maxFinite,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color.fromARGB(255, 255, 255, 255),
             ),
             child: Column(
@@ -175,7 +174,7 @@ class _SiemanFormState extends State<SiemanForm> {
                 const SizedBox(height: 20),
                 Container(
                   margin: EdgeInsets.only(left: 24, right: 10),
-                  child: Row(
+                  child: const Row(
                     children: [
                       Text(
                         'Lokasi Assesment',
@@ -185,25 +184,25 @@ class _SiemanFormState extends State<SiemanForm> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20),
                   child: buildLaporanField(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: buildLaporanField(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: buildLaporanField(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: buildLaporanField(),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: buildLaporanField(),
                 ),
               ],
@@ -213,7 +212,7 @@ class _SiemanFormState extends State<SiemanForm> {
           Container(
             height: 520,
             width: double.maxFinite,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color.fromARGB(255, 255, 255, 255),
             ),
             child: Column(
@@ -222,7 +221,7 @@ class _SiemanFormState extends State<SiemanForm> {
                 const SizedBox(height: 20),
                 Container(
                   margin: EdgeInsets.only(left: 24, right: 10),
-                  child: Row(
+                  child: const Row(
                     children: [
                       Text(
                         'Lokasi Assesment',
@@ -232,32 +231,49 @@ class _SiemanFormState extends State<SiemanForm> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
-                  child: buildLaporanField(),
+                const SizedBox(height: 20),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.only(left: 20, right: 10),
+                        child: buildLaporanField(),
+                      ),
+                    ),
+                    Expanded(
+                      child: Container(
+                        margin: const EdgeInsets.only(left: 10, right: 20),
+                        child: buildLaporanField(),
+                      ),
+                    ),
+                  ],
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
                   child: testField(),
+                ),
+                const SizedBox(height: 10),
+                Container(
+                  width: double.maxFinite,
+                  margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text("Set Lokasi"),
+                  ),
                 )
               ],
             ),
           ),
           SizedBox(height: getProportionateScreenHeight(30)),
-          FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(20)),
+          // FormError(errors: errors),
+          // SizedBox(height: getProportionateScreenHeight(20)),
           ElevatedButton(
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
                 KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                // Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
             child: const Text("Submit"),
@@ -267,53 +283,22 @@ class _SiemanFormState extends State<SiemanForm> {
     );
   }
 
-//   class DropdownMenuExample extends StatefulWidget {
-//   const DropdownMenuExample({super.key});
-
-//   @override
-//   State<DropdownMenuExample> createState() => _DropdownMenuExampleState();
-// }
-
-  DropdownMenuExample() {
-    List<String> list = <String>['One', 'Two', 'Three', 'Four'];
-    String dropdownValue = list.first;
-    return DropdownButton<String>(
-      value: dropdownValue,
-      icon: const Icon(Icons.arrow_downward),
-      elevation: 16,
-      style: const TextStyle(color: Colors.deepPurple),
-      underline: Container(
-        height: 2,
-        color: Colors.deepPurpleAccent,
-      ),
-      onChanged: (String? value) {
-        // This is called when the user selects an item.
-        setState(() {
-          dropdownValue = value!;
-        });
-      },
-      items: list.map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
-    );
-  }
-
   DropdownButtonFormField testField() {
     List<String> list = <String>['One', 'Two', 'Three', 'Four'];
     String dropdownValue = list.first;
     return DropdownButtonFormField(
-      items: [
-        DropdownMenuItem(
-          child: Text("One"),
-          value: "One",
-        ),
-      ],
-      onChanged: (value) {
-        print(value);
+      value: dropdownValue,
+      onChanged: (newValue) {
+        print(newValue);
+        // Add any other logic you want to perform on value change
       },
+      validator: (value) => value == null ? 'Field is required' : null,
+      items: list.map((item) {
+        return DropdownMenuItem(
+          child: Text(item),
+          value: item,
+        );
+      }).toList(),
       decoration: const InputDecoration(
         labelText: "Lokasi",
         hintText: "Lokasi",
@@ -336,7 +321,7 @@ class _SiemanFormState extends State<SiemanForm> {
       validator: (value) {
         if (value!.isEmpty) {
           addError(error: kLaporanNullError);
-          return "";
+          return "Laporan tidak boleh kosong";
         }
         return null;
       },
