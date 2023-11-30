@@ -23,8 +23,10 @@ class Body extends StatelessWidget {
             ]
           ),
           ),
-          Container(
-            height: 400,
+          // Expanded(
+            //flex: 1,
+           Container(
+            height: 500,
             margin: EdgeInsets.only(right:10 , left: 10,),
             width: double.maxFinite,
             decoration: BoxDecoration(
@@ -58,9 +60,10 @@ class Body extends StatelessWidget {
               ],
             ),
           ),
+          //),
           const SizedBox(height: 8),
              Container(
-            height: 400,
+            height: 500,
             margin: EdgeInsets.only(right:10 , left: 10,),
             width: double.maxFinite,
             decoration: BoxDecoration(
@@ -71,12 +74,13 @@ class Body extends StatelessWidget {
               children: [
                 const SizedBox(height: 20),
                 Container(
-                  margin: EdgeInsets.only(left: 24, right: 10),
+                  margin: EdgeInsets.only(top: 24, left: 24, right: 10),
                   child: Column(
                     children: [
+                      
                       Text(
-                      'Sejarah Lembaga Badan Nasional Penanggulangan Bencana (BNPB) terbentuk tidak terlepas dari perkembangan penanggulangan bencana pada masa kemerdekaan hingga bencana alam berupa gempa bumi dahsyat di Samudera Hindia pada abad 20. Sementara itu, perkembangan tersebut sangat dipengaruhi pada konteks situasi, cakupan dan paradigma penanggulangan bencana.',
-                      style: const TextStyle(fontSize: 14.0, fontWeight: FontWeight.normal),
+                      'Struktur Organisasi BPBD Kota Cimahi',
+                      style: const TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,),
                     ),
                     const SizedBox(height: 10),
                     Text(
