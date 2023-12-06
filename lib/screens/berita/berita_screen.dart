@@ -30,7 +30,11 @@ class BeritaScreen extends StatelessWidget {
     ),
   body: ListView(
     children: [
-    Container(
+    InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/profil');
+            },
+    child: Container(
     margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
     width: double.maxFinite,
     height: 136,
@@ -73,6 +77,7 @@ class BeritaScreen extends StatelessWidget {
         ),
       ],
     ),
+  ),
   ),
   Container(
     margin: const EdgeInsets.only(top: 10, left: 10, right: 10),

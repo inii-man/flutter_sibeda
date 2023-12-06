@@ -1,50 +1,10 @@
 import 'package:flutter/material.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:http/http.dart' as http;
+import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
+import 'dart:convert';
 import 'profile_menu.dart';
 import 'profile_pic.dart';
-
-/*class Body extends StatelessWidget {
-  const Body({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(vertical: 20),
-      child: Column(
-        children: [
-          const ProfilePic(),
-          const SizedBox(height: 20),
-          ProfileMenu(
-            text: "My Account",
-            icon: "assets/icons/User Icon.svg",
-            press: () => {},
-          ),
-          ProfileMenu(
-            text: "Notifications",
-            icon: "assets/icons/Bell.svg",
-            press: () {},
-          ),
-          ProfileMenu(
-            text: "Settings",
-            icon: "assets/icons/Settings.svg",
-            press: () {},
-          ),
-          ProfileMenu(
-            text: "Help Center",
-            icon: "assets/icons/Question mark.svg",
-            press: () {},
-          ),
-          ProfileMenu(
-            text: "Log Out",
-            icon: "assets/icons/Log out.svg",
-            press: () {},
-          ),
-        ],
-      ),
-    );
-  }
-}*/
-
 class Body extends StatelessWidget {
   const Body({super.key});
 
@@ -53,18 +13,18 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(children: [
         Container(
-          margin: EdgeInsets.only(
+          margin: const EdgeInsets.only(
             top: 24,
             bottom: 24,
           ),
-          child: Column(children: [
-            const ProfilePic(),
+          child: const Column(children: [
+            ProfilePic(),
           ]),
         ),
         Container(
           height: 350,
           width: double.maxFinite,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color.fromARGB(255, 255, 255, 255),
           ),
           child: Column(
@@ -73,17 +33,17 @@ class Body extends StatelessWidget {
               const SizedBox(height: 20),
               Container(
                 margin: EdgeInsets.only(left: 24, right: 10),
-                child: Row(
+                child: const Row(
                   children: [
                     Text(
                       'Informasi BPBD',
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 14.0, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               ProfileMenu(
                 text: "Profile BPBD",
                 icon: "assets/icons/User Icon.svg",
@@ -106,11 +66,11 @@ class Body extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Container(
           height: 250,
           width: double.maxFinite,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color.fromARGB(255, 255, 255, 255),
           ),
           child: Column(
@@ -119,11 +79,11 @@ class Body extends StatelessWidget {
               const SizedBox(height: 20),
               Container(
                 margin: EdgeInsets.only(left: 24, right: 10),
-                child: Row(
+                child: const Row(
                   children: [
                     Text(
                       'Pengaturan Akun',
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 14.0, fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -147,11 +107,11 @@ class Body extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Container(
           height: 200,
           width: double.maxFinite,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color.fromARGB(255, 255, 255, 255),
           ),
           child: Column(
@@ -165,12 +125,35 @@ class Body extends StatelessWidget {
               ProfileMenu(
                 text: "Logout",
                 icon: "assets/icons/Log out.svg",
-                press: () {},
-              ),
+                press: () => logoutAndNavigateToSignIn(context),
+              )
             ],
           ),
         ),
       ]),
-    );
+    ); 
+  }
+  Future<void> logoutAndNavigateToSignIn(BuildContext context) async {
+    
+    // Retrieve the token from shared preferences
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    final String? token = prefs.getString('token');
+
+    if (token != null) {
+      // Use the token for another endpoint
+      const String logoutApi = 'http://sibeda-development.cpat.my.id/api/auth/logout'; // Replace with another API endpoint
+      final response = await http.post(
+        Uri.parse(logoutApi),
+        headers: {'Authorization': 'Bearer $token'},
+      );
+
+      if (response.statusCode == 200) {
+        Navigator.pushReplacementNamed(context, SignInScreen.routeName);
+      } else {
+        print('Request failed: ${response.statusCode}');
+      }
+    } else {
+      print('Token is not available. User needs to log in.');
+    }
   }
 }
