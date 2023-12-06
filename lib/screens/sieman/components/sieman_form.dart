@@ -231,7 +231,7 @@ class _SiemanFormState extends State<SiemanForm> {
       validator: (value) {
         if (value!.isEmpty) {
           addError(error: kLaporanNullError);
-          return "";
+          return "Laporan tidak boleh kosong";
         }
         return null;
       },
