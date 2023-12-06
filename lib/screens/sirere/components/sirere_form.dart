@@ -166,13 +166,13 @@ class _SirereFormState extends State<SirereForm> {
       onSaved: (newValue) => laporan = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          removeError(error: kLaporanNullError);
+          removeError(error: kSiemanLaporanNullError);
         }
         return;
       },
       validator: (value) {
         if (value!.isEmpty) {
-          addError(error: kLaporanNullError);
+          addError(error: kSiemanLaporanNullError);
           return "";
         }
         return null;

@@ -29,7 +29,38 @@ final RegExp emailValidatorRegExp =
 const String kEmailNullError = "Please Enter your email";
 
 // sieman input form
-const String kLaporanNullError = "Please Enter your Laporan";
+const String kSiemanLaporanNullError = "Mohon Masukan No Laporan";
+const String kSiemanPetugasNullError = "Mohon Masukan Nama Petugas";
+const String kSiemanUnsurTerkaitNullError = "Mohon Masukan Unsur Terkait";
+const String kSiemanNamaPelaporNullError = "Mohon Masukan Nama Pelapor";
+const String kSiemanNoKontakNullError = "Mohon Masukan No Kontak";
+const String kSiemanUnsurPelaporNullError = "Mohon Masukan Unsur Pelapor";
+const String kSiemanTglNullError = "Mohon Masukan Tanggal";
+const String kSiemanWaktuNullError = "Mohon Masukan Waktu";
+const String kSiemanPotensiBencanaNullError = "Mohon Masukan Potensi Bencana";
+const String kSiemanLokasiAssesmentNullError = "Mohon Masukan Lokasi Assesment";
+const String kSiemanRtNullError = "Mohon Masukan RT";
+const String kSiemanRwNullError = "Mohon Masukan RW";
+const String kSiemanKelurahanNullError = "Mohon Masukan Kelurahan";
+const String kSiemanKecamatanNullError = "Mohon Masukan Kecamatan";
+const String kSiemanLongitudeNullError = "Mohon Masukan Longitude";
+const String kSiemanLatitudeNullError = "Mohon Masukan Latitude";
+const String kSiemanAksesLokasiNullError = "Mohon Masukan Akses Lokasi";
+const String kSiemanSektorNullError = "Mohon Masukan Sektor";
+const String kSiemanTipeAssetNullError = "Mohon Masukan Tipe Asset";
+const String kSiemanKepemilikanAssetNullError =
+    "Mohon Masukan Kepemilikan Asset";
+const String kSiemanFungsiAssetNullError = "Mohon Masukan Fungsi Asset";
+const String kSiemanPenyebabNullError = "Mohon Masukan Penyebab";
+const String kSiemanPotensiDampakNullError = "Mohon Masukan Potensi Dampak";
+const String kSiemanPotensiKorbanNullError = "Mohon Masukan Potensi Korban";
+const String kSiemanPotensiKerusakanNullError =
+    "Mohon Masukan Potensi Kerusakan";
+const String kSiemanEstimasiKerugianNullError =
+    "Mohon Masukan Estimasi Kerugian";
+const String kSiemanUpayaPerluNullError = "Mohon Masukan Upaya Perlu";
+const String kSiemanUpayaSudahNullError = "Mohon Masukan Upaya Sudah";
+const String kSiemanLogistikNullError = "Mohon Masukan Logistik";
 
 const String kInvalidEmailError = "Please Enter Valid Email";
 const String kPassNullError = "Please Enter your password";
