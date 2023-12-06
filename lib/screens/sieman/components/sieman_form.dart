@@ -4,11 +4,9 @@ import 'package:flutter/material.dart';
 import '../../../components/custom_surfix_icon.dart';
 import '../../../components/form_error.dart';
 import '../../../helper/keyboard.dart';
-import '../../forgot_password/forgot_password_screen.dart';
 import '../../login_success/login_success_screen.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class SiemanForm extends StatefulWidget {
   const SiemanForm({super.key});
@@ -46,223 +44,123 @@ class _SiemanFormState extends State<SiemanForm> {
   Widget build(BuildContext context) {
     return Form(
       key: _formKey,
-      child: Column(
-        children: [
-          /// CARD LAPORAN
-          Container(
-            height: 100,
-            width: double.maxFinite,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 255, 255, 255),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            /// CARD LAPORAN
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(height: 20),
-                Container(
-                  margin: EdgeInsets.only(left: 24, right: 10),
-                  child: Row(
-                    children: [],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
-                  child: buildLaporanField(),
-                ),
+                buildLaporanField(),
               ],
             ),
-          ),
-          SizedBox(height: getProportionateScreenHeight(10)),
+            const SizedBox(height: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(height: 20),
+                const Text(
+                  'Tim Assesment',
+                  style: TextStyle(
+                      fontSize: 14.0, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 20),
+                buildLaporanField(),
+                const SizedBox(height: 16),
+                buildLaporanField(),
+              ],
+            ),
+            const SizedBox(height: 10),
 
-          /// CARD TIM ASSESMENT
-          Container(
-            height: 220,
-            width: double.maxFinite,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 255, 255, 255),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            /// CARD INFORMASI UMUM
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(height: 20),
-                Container(
-                  margin: EdgeInsets.only(left: 24, right: 10),
-                  child: Row(
-                    children: [
-                      Text(
-                        'Tim Assesment',
-                        style: const TextStyle(
-                            fontSize: 14.0, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
+                const Text(
+                  'Informasi Umum',
+                  style: TextStyle(
+                      fontSize: 14.0, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 20),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
+                const SizedBox(height: 20),
+                buildLaporanField(),
+                const SizedBox(height: 20),
+                buildLaporanField(),
+                const SizedBox(height: 20),
+                buildLaporanField(),
+                const SizedBox(height: 20),
+                buildLaporanField(),
+                const SizedBox(height: 20),
+                buildLaporanField(),
+                const SizedBox(height: 20),
+                buildLaporanField(),
               ],
             ),
-          ),
-          SizedBox(height: getProportionateScreenHeight(10)),
-
-          /// CARD INFORMASI UMUM
-          Container(
-            height: 520,
-            width: double.maxFinite,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 255, 255, 255),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            const SizedBox(height: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(height: 20),
-                Container(
-                  margin: EdgeInsets.only(left: 24, right: 10),
-                  child: Row(
-                    children: [
-                      Text(
-                        'Informasi Umum',
-                        style: const TextStyle(
-                            fontSize: 14.0, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
+                const Row(
+                  children: [
+                    Text(
+                      'Lokasi Assesment',
+                      style: TextStyle(
+                          fontSize: 14.0, fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
-                SizedBox(height: 20),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
+                const SizedBox(height: 20),
+                buildLaporanField(),
+                const SizedBox(height: 16),
+                buildLaporanField(),
+                const SizedBox(height: 16),
+                buildLaporanField(),
+                const SizedBox(height: 16),
+                buildLaporanField(),
+                const SizedBox(height: 16),
+                buildLaporanField(),
               ],
             ),
-          ),
-          SizedBox(height: getProportionateScreenHeight(10)),
-          Container(
-            height: 520,
-            width: double.maxFinite,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 255, 255, 255),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            const SizedBox(height: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(height: 20),
-                Container(
-                  margin: EdgeInsets.only(left: 24, right: 10),
-                  child: Row(
-                    children: [
-                      Text(
-                        'Lokasi Assesment',
-                        style: const TextStyle(
-                            fontSize: 14.0, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
+                const Text(
+                  'Lokasi Assesment',
+                  style: TextStyle(
+                      fontSize: 14.0, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 20),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: getProportionateScreenHeight(10)),
-          Container(
-            height: 520,
-            width: double.maxFinite,
-            decoration: BoxDecoration(
-              color: Color.fromARGB(255, 255, 255, 255),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
                 const SizedBox(height: 20),
-                Container(
-                  margin: EdgeInsets.only(left: 24, right: 10),
-                  child: Row(
-                    children: [
-                      Text(
-                        'Lokasi Assesment',
-                        style: const TextStyle(
-                            fontSize: 14.0, fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 20),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: buildLaporanField(),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                  child: testField(),
-                )
+                buildLaporanField(),
+                const SizedBox(height: 16),
+                buildLaporanField(),
+                const SizedBox(height: 16),
+                testField()
               ],
             ),
-          ),
-          SizedBox(height: getProportionateScreenHeight(30)),
-          FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(20)),
-          ElevatedButton(
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                // if all are valid then go to success screen
-                KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
-              }
-            },
-            child: const Text("Submit"),
-          ),
-        ],
+            const SizedBox(height: 30),
+            FormError(errors: errors),
+            const SizedBox(height: 20),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20.0),
+              child: ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
+                    // if all are valid then go to success screen
+                    KeyboardUtil.hideKeyboard(context);
+                    Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                  }
+                },
+                child: const Text("Submit"),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -274,41 +172,39 @@ class _SiemanFormState extends State<SiemanForm> {
 //   State<DropdownMenuExample> createState() => _DropdownMenuExampleState();
 // }
 
-  DropdownMenuExample() {
-    List<String> list = <String>['One', 'Two', 'Three', 'Four'];
-    String dropdownValue = list.first;
-    return DropdownButton<String>(
-      value: dropdownValue,
-      icon: const Icon(Icons.arrow_downward),
-      elevation: 16,
-      style: const TextStyle(color: Colors.deepPurple),
-      underline: Container(
-        height: 2,
-        color: Colors.deepPurpleAccent,
-      ),
-      onChanged: (String? value) {
-        // This is called when the user selects an item.
-        setState(() {
-          dropdownValue = value!;
-        });
-      },
-      items: list.map<DropdownMenuItem<String>>((String value) {
-        return DropdownMenuItem<String>(
-          value: value,
-          child: Text(value),
-        );
-      }).toList(),
-    );
-  }
+  // DropdownMenuExample() {
+  //   List<String> list = <String>['One', 'Two', 'Three', 'Four'];
+  //   String dropdownValue = list.first;
+  //   return DropdownButton<String>(
+  //     value: dropdownValue,
+  //     icon: const Icon(Icons.arrow_downward),
+  //     elevation: 16,
+  //     style: const TextStyle(color: Colors.deepPurple),
+  //     underline: Container(
+  //       height: 2,
+  //       color: Colors.deepPurpleAccent,
+  //     ),
+  //     onChanged: (String? value) {
+  //       // This is called when the user selects an item.
+  //       setState(() {
+  //         dropdownValue = value!;
+  //       });
+  //     },
+  //     items: list.map<DropdownMenuItem<String>>((String value) {
+  //       return DropdownMenuItem<String>(
+  //         value: value,
+  //         child: Text(value),
+  //       );
+  //     }).toList(),
+  //   );
+  // }
 
   DropdownButtonFormField testField() {
-    List<String> list = <String>['One', 'Two', 'Three', 'Four'];
-    String dropdownValue = list.first;
     return DropdownButtonFormField(
-      items: [
+      items: const [
         DropdownMenuItem(
-          child: Text("One"),
           value: "One",
+          child: Text("One"),
         ),
       ],
       onChanged: (value) {
@@ -318,8 +214,7 @@ class _SiemanFormState extends State<SiemanForm> {
         labelText: "Lokasi",
         hintText: "Lokasi",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon:
-            CustomSurffixIcon(svgIcon: "assets/icons/Location point.svg"),
+        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Location point.svg"),
       ),
     );
   }
